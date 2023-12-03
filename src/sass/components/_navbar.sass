@@ -1,0 +1,36 @@
+.navbar
+  padding: 3rem 5.5rem
+  background-color: $color-white
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  &__logo
+    display: flex
+    flex-direction: row
+    justify-content: start
+    align-items: center
+    &__text
+      margin-left: .5rem
+      color: $color-navigation
+      font-size: 3.4rem
+      font-weight: 700
+    //&__icon
+  &__menu
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    justify-content: center
+  &__item
+    margin: 0 3.25rem 0 3.25rem
+    color: $color-navigation
+    font-weight: 500
+  &__icons
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    &__icon
+      margin: 0 2.25rem 0 2.25rem
