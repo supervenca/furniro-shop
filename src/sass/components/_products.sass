@@ -66,10 +66,33 @@
   &__show-more
     display: flex
     justify-content: center
+  &__pages
+    padding: 3rem 0 6rem 0
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+  &__page, .btn__next
+    height: 6rem
+    padding: 1.5rem 2.7rem
+    border-radius: .1rem
+    border: none
+    border-radius: 1rem
+    margin-right: 3.8rem
+    font-size: 2rem
+    font-weight: 400
+.pages__active
+  background-color: $color-primary
+  color: $color-white
+.pages__inactive
+  background-color: $color-pale-beige
+  color: #000
+
 .pink
   background-color: #E97171
 .mint
   background-color: #2EC1AC
+
 .options-bar
   margin-top:2.4rem
   &__item
