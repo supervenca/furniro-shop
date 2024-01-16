@@ -38,8 +38,8 @@ window.addEventListener('DOMContentLoaded', () => {
             unselectPage();
         });
   
-        //pages.[pageIndex - 1].classList.add('pages__active');
-        //pages.[pageIndex - 1].classList.remove('pages__inactive');
+        pages[pageIndex - 1].classList.add('pages__active');
+        pages[pageIndex - 1].classList.remove('pages__inactive');
     }
 
     function plusPages(n) {

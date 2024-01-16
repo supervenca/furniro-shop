@@ -32,6 +32,7 @@ dot.addEventListener('click', (e) => {
        slideIndex = slideTo;
        offset = deleteNotDigits(width) * (slideTo - 1);
        slidesField.style.transform = `translateX(-${offset}px)`;
+       slidesField.style.transition = '1.8s';
          //переключение серых индикаторов
          dots.forEach(dot => {
            dot.classList.add('dot-inactive');
@@ -52,6 +53,7 @@ next.addEventListener("click", () => {
 		}
     //сдвигаем слайды влево
 		slidesField.style.transform = `translateX(-${offset}px)`;
+    slidesField.style.transition = '1.8s';
     //увеличиваем индекс текущего слайда. если дошли до последнего - возвращаемся к первоначальному индексу: 1
 		if (slideIndex == slides.length) {
 			slideIndex = 1;
