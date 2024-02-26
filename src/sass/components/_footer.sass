@@ -1,11 +1,11 @@
 .footer
   padding: 4.8rem 20rem 3.8rem 10rem
-  border-top: 1px solid rgba(0, 0, 0, 0.17)
+  border-top: .1rem solid rgba(0, 0, 0, 0.17)
   display: grid
   grid-template-columns: 2fr repeat(4, 1fr)
   grid-template-rows: repeat(4, min-content)
   column-gap: 1.1rem
-  color: #000
+  color: $color-black
   &__company
     grid-row: 1 / 2
     grid-column: 1 / 2
@@ -35,9 +35,9 @@
     font-weight: 400
     &:focus
       outline: none
-      color: #000
+      color: $color-black
   &__btn
-    border: #000 .1rem
+    border: $color-black .1rem
     border-style: none none solid none
     background-color: transparent
     height: 2.1rem
