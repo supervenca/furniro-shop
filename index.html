@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furniro Shop</title>
     <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/style.css">
@@ -28,30 +29,34 @@
             <a href="#"><img class="navbar__icons__icon" src="src/icons/shopping-cart.svg"></a>
           </div>
         </nav>
-        <div class="header">
-          <div class="header__card">
-            <p class="header__title_secondary">New Arrival</p>
-            <h1 class="header__title">Discover Our<br>New Collection</h1>
-            <p class="header__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
-            <button class="btn_dark header__btn">Buy Now</button>
+        <div class="header-wrapper">
+          <div class="header">
+            <div class="header__card">
+              <p class="header__title_secondary">New Arrival</p>
+              <h1 class="header__title">Discover Our<br>New Collection</h1>
+              <p class="header__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+              <button class="btn_dark header__btn">Buy Now</button>
+            </div>
           </div>
         </div>
-        <div class="category">
-          <h2 class="text-center">Browse The Range</h2>
-          <p class="subtitle text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <div class="category__cards">
-              <div class="category__card">
-              <a href="#"><img class="category__card__img dining" src="src/img/homepage/dining.png" alt="Dining">
-              <p class="category__card__caption text-center">Dining</p></a>
-              
-            </div>
-              <div class="category__card">
-              <a href="#"><img class="category__card__img living" src="src/img/homepage/living.png" alt="Living">
-              <p class="category__card__caption text-center">Living</p></a>
-            </div>
-              <div class="category__card">
-              <a href="#"><img class="category__card__img" src="src/img/homepage/bedroom.png" alt="Bedroom">
-              <p class="category__card__caption text-center">Bedroom</p></a>
+        <div class="category-wrapper">
+          <div class="category">
+            <h2 class="text-center">Browse The Range</h2>
+            <p class="subtitle text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="category__cards">
+                <div class="category__card">
+                <a href="#"><img class="category__card__img dining" src="src/img/homepage/dining.png" alt="Dining">
+                <p class="category__card__caption text-center">Dining</p></a>
+                
+              </div>
+                <div class="category__card">
+                <a href="#"><img class="category__card__img living" src="src/img/homepage/living.png" alt="Living">
+                <p class="category__card__caption text-center">Living</p></a>
+              </div>
+                <div class="category__card">
+                <a href="#"><img class="category__card__img" src="src/img/homepage/bedroom.png" alt="Bedroom">
+                <p class="category__card__caption text-center">Bedroom</p></a>
+              </div>
             </div>
           </div>
         </div>
@@ -210,76 +215,80 @@
             <button class="btn_white-yellow-border">Show More</button>
           </div>
         </div>
-        <div class="rooms">
-          <div class="rooms__left-bar">
-            <h1 class="title-primary">50+ Beautiful rooms inspiration</h1>
-            <p class="rooms__left-bar__text">Our designer already made a lot of beautiful prototipe of rooms that inspire you</p>
-            <button class="rooms__left-bar__btn btn_dark">Explore More</button>
+        <div class="rooms-wrapper">
+          <div class="rooms">
+            <div class="rooms__left-bar">
+              <h1 class="title-primary">50+ Beautiful rooms inspiration</h1>
+              <p class="rooms__left-bar__text">Our designer already made a lot of beautiful prototipe of rooms that inspire you</p>
+              <button class="rooms__left-bar__btn btn_dark">Explore More</button>
+              </div>
+            <div class="rooms__slider">
+              <div class="rooms__slider__container">
+                <ul class="slider-inner">
+                  <li class="rooms__slider__slide">
+                  <img class="rooms__slider__img" src="src/img/homepage/rooms_slide-1.png">
+                <div class="rooms__slider__caption">
+                  <span class="rooms__slider__caption__text long-dash">01</span>
+                  <span class="rooms__slider__caption__text">Bedroom</span>
+                  <p class="rooms__slider__caption__title">Inner Peace</p>
+                </div>
+                <button class="rooms__slider__btn btn_dark"><img src="src/icons/right-arrow-white.svg"></button> 
+                </li>
+                  <li class="rooms__slider__slide">
+                  <img class="rooms__slider__img" src="src/img/homepage/rooms_slide-2.png">
+                <div class="rooms__slider__caption">
+                  <span class="rooms__slider__caption__text long-dash">02</span>
+                  <span class="rooms__slider__caption__text">Kitchen</span>
+                  <p class="rooms__slider__caption__title">Text</p>
+                </div>
+                <button class="rooms__slider__btn btn_dark"><img src="src/icons/right-arrow-white.svg"></button> 
+                </li>
+                  <li class="rooms__slider__slide">
+                  <img class="rooms__slider__img" src="src/img/homepage/rooms_slide-3.png">
+                <div class="rooms__slider__caption">
+                  <span class="rooms__slider__caption__text long-dash">03</span>
+                  <span class="rooms__slider__caption__text">Room</span>
+                  <p class="rooms__slider__caption__title">Text</p>
+                </div>
+                <button class="rooms__slider__btn btn_dark"><img src="src/icons/right-arrow-white.svg"></button> 
+                </li>
+                  <li class="rooms__slider__slide">
+                  <img class="rooms__slider__img" src="src/img/homepage/living.png">
+                <div class="rooms__slider__caption">
+                  <span class="rooms__slider__caption__text long-dash">04</span>
+                  <span class="rooms__slider__caption__text">Room</span>
+                  <p class="rooms__slider__caption__title">Text</p>
+                </div>
+                <button class="rooms__slider__btn btn_dark"><img src="src/icons/right-arrow-white.svg"></button> 
+                </li>
+                </ul>
             </div>
-          <div class="rooms__slider">
-            <div class="rooms__slider__container">
-              <ul class="slider-inner">
-                <li class="rooms__slider__slide">
-                <img class="rooms__slider__img" src="src/img/homepage/rooms_slide-1.png">
-              <div class="rooms__slider__caption">
-                <span class="rooms__slider__caption__text long-dash">01</span>
-                <span class="rooms__slider__caption__text">Bedroom</span>
-                <p class="rooms__slider__caption__title">Inner Peace</p>
-              </div>
-              <button class="rooms__slider__btn btn_dark"><img src="src/icons/right-arrow-white.svg"></button> 
-              </li>
-                <li class="rooms__slider__slide">
-                <img class="rooms__slider__img" src="src/img/homepage/rooms_slide-2.png">
-              <div class="rooms__slider__caption">
-                <span class="rooms__slider__caption__text long-dash">02</span>
-                <span class="rooms__slider__caption__text">Kitchen</span>
-                <p class="rooms__slider__caption__title">Text</p>
-              </div>
-              <button class="rooms__slider__btn btn_dark"><img src="src/icons/right-arrow-white.svg"></button> 
-              </li>
-                <li class="rooms__slider__slide">
-                <img class="rooms__slider__img" src="src/img/homepage/rooms_slide-3.png">
-              <div class="rooms__slider__caption">
-                <span class="rooms__slider__caption__text long-dash">03</span>
-                <span class="rooms__slider__caption__text">Room</span>
-                <p class="rooms__slider__caption__title">Text</p>
-              </div>
-              <button class="rooms__slider__btn btn_dark"><img src="src/icons/right-arrow-white.svg"></button> 
-              </li>
-                <li class="rooms__slider__slide">
-                <img class="rooms__slider__img" src="src/img/homepage/living.png">
-              <div class="rooms__slider__caption">
-                <span class="rooms__slider__caption__text long-dash">04</span>
-                <span class="rooms__slider__caption__text">Room</span>
-                <p class="rooms__slider__caption__title">Text</p>
-              </div>
-              <button class="rooms__slider__btn btn_dark"><img src="src/icons/right-arrow-white.svg"></button> 
-              </li>
-              </ul>
+              <div class="rooms__slider__dots">
+              <span class="rooms__slider__dots__dot"></span>
+              <span class="rooms__slider__dots__dot"></span>
+              <span class="rooms__slider__dots__dot"></span>
+              <span class="rooms__slider__dots__dot"></span>
               <div class="rooms__slider__toggle next"><img src="src/icons/next-arrow-primary.svg"></div>
-          </div>
-            <div class="rooms__slider__dots">
-            <span class="rooms__slider__dots__dot"></span>
-            <span class="rooms__slider__dots__dot"></span>
-            <span class="rooms__slider__dots__dot"></span>
-            <span class="rooms__slider__dots__dot"></span>
-          </div> 
             </div> 
-        </div>
-        <div class="gallery">
-          <div class="gallery__header">
-            <p class="subtitle text-center">Share your setup with</p>
-            <h1 class="title-primary text-center">#FuniroFurniture</h1>
+              </div> 
           </div>
-          <img class="gallery__img-1" src="src/img/homepage/gallery-1.png" alt="img-1">
-          <img class="gallery__img-2" src="src/img/homepage/gallery-2.png" alt="img-2">
-          <img class="gallery__img-3" src="src/img/homepage/gallery-3.png" alt="img-3">
-          <img class="gallery__img-4" src="src/img/homepage/gallery-4.png" alt="img-4">
-          <img class="gallery__img-5" src="src/img/homepage/gallery-5.png" alt="img-5">
-          <img class="gallery__img-6" src="src/img/homepage/gallery-6.png" alt="img-6">
-          <img class="gallery__img-7" src="src/img/homepage/gallery-7.png" alt="img-7">
-          <img class="gallery__img-8" src="src/img/homepage/gallery-8.png" alt="#">
-          <img class="gallery__img-9" src="src/img/homepage/gallery-9.png" alt="#">
+        </div>
+        <div class="gallery-wrapper">
+          <div class="gallery">
+            <div class="gallery__header">
+              <p class="subtitle text-center">Share your setup with</p>
+              <h1 class="title-primary text-center">#FuniroFurniture</h1>
+            </div>
+            <img class="gallery__img-1" src="src/img/homepage/gallery-1.png" alt="img-1">
+            <img class="gallery__img-2" src="src/img/homepage/gallery-2.png" alt="img-2">
+            <img class="gallery__img-3" src="src/img/homepage/gallery-3.png" alt="img-3">
+            <img class="gallery__img-4" src="src/img/homepage/gallery-4.png" alt="img-4">
+            <img class="gallery__img-5" src="src/img/homepage/gallery-5.png" alt="img-5">
+            <img class="gallery__img-6" src="src/img/homepage/gallery-6.png" alt="img-6">
+            <img class="gallery__img-7" src="src/img/homepage/gallery-7.png" alt="img-7">
+            <img class="gallery__img-8" src="src/img/homepage/gallery-8.png" alt="#">
+            <img class="gallery__img-9" src="src/img/homepage/gallery-9.png" alt="#">
+          </div>
         </div>
         <footer class="footer">
             <h1 class="footer__company">Funiro.</h1>
@@ -303,7 +312,7 @@
           <div class="footer__divider"></div>
           <p class="footer__rights">2023 furino. All rights reverved</p>
          </footer>
-</div>
+    </div>
 
 <script src="src/js/script.js"></script>
 

@@ -1,11 +1,15 @@
 .products
-  padding: 0 10rem 7rem 10rem
+  padding: 0 2rem 7rem 2rem
+  position: relative
+  max-width: 100%
   &__cards
     display: grid
     grid-template-columns: repeat(4, min-content)
     grid-gap: 3rem
     margin: 3rem 0 3rem 0
     justify-content: center
+    @include respond(small-desktop)
+      grid-template-columns: repeat(3, min-content)
   &__card
     height: 44.6rem
     width: 28.5rem
