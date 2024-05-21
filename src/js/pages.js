@@ -16,34 +16,33 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
     pagesParent.addEventListener('click', (event) => {
-        if(event.target && event.target.classList.contains('products__page')){
+        if (event.target && event.target.classList.contains('products__page')) {
             pages.forEach((item, i) => {
                 if (event.target == item) {
                     unselectPage();
                     selectPage(i);
+                    pageIndex = i + 1; // Обновляем pageIndex при ручном выборе страницы
                 }
             });
         }
     });
 
     function nextPage(n) {
-        if(n > pages.length) {
-            pageIndex = pages.length;
-            //здесь можно добавить динамическое формирование следующей страницы
+        pageIndex += n;
+       
+        if (pageIndex > pages.length) {
+            pageIndex = 1; // Если закончились страницы, сбрасываем на первую
         }
-        if(n < 1){
-            pageIndex = pages.length;
-    }
-        pages.forEach(item => {
-            unselectPage();
-        });
-  
-        pages[pageIndex - 1].classList.add('pages__active');
-        pages[pageIndex - 1].classList.remove('pages__inactive');
+        if (pageIndex < 1) {
+            pageIndex = pages.length; // Если индекс меньше 1, устанавливаем на последнюю страницу
+        }
+
+        unselectPage();
+        selectPage(pageIndex - 1);
     }
 
     function plusPages(n) {
-        nextPage(pageIndex += n);
+        nextPage(n);
     }
 
     nextBtn.addEventListener('click', () => {
