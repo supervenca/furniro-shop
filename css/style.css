@@ -127,6 +127,21 @@ h2 {
   cursor: auto;
 }
 
+.btn_shopping-cart {
+  background-color: #FFFFFF;
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 0.6rem 3rem;
+  border: 0.1rem solid #000;
+  border-radius: 5rem;
+}
+.btn_shopping-cart:hover {
+  background-color: #B88E2F;
+  color: #FFFFFF;
+  border: none;
+}
+
 .long-dash::after {
   content: "";
   display: inline-block;
@@ -456,6 +471,107 @@ td {
   height: 1.6rem;
   font-size: 1.8rem;
   font-weight: 600;
+}
+
+section {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  top: 11rem;
+  right: 0;
+  z-index: 9;
+}
+
+.shopping-cart {
+  color: #000;
+  z-index: 10;
+  position: fixed;
+  top: 11rem;
+  right: 0;
+  width: 41.7rem;
+  height: 85vh;
+  background-color: #FFFFFF;
+  padding: 3rem;
+  display: none;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  gap: 3rem;
+}
+.shopping-cart__header {
+  grid-column: 1/5;
+  color: #000;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: normal;
+  border-bottom: solid 0.1rem #D9D9D9;
+}
+.shopping-cart__icon {
+  grid-column: 7/8;
+  justify-self: end;
+  align-self: center;
+  justify-self: end;
+  cursor: pointer;
+}
+.shopping-cart__img {
+  grid-column: 1/2;
+  width: 10.5rem;
+  height: 10.5rem;
+}
+.shopping-cart__img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background-color: #F9F1E7;
+  -o-object-fit: cover;
+     object-fit: cover;
+  align-self: center;
+}
+.shopping-cart__product {
+  grid-column: 2/6;
+  justify-self: start;
+  align-self: center;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.shopping-cart__product > span {
+  margin-right: 1.5rem;
+}
+.shopping-cart__product__name {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.shopping-cart__product__price {
+  font-weight: 500;
+  color: #B88E2F;
+}
+.shopping-cart__product__amount {
+  font-size: 1.6rem;
+}
+.shopping-cart__total {
+  grid-row: 6/7;
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: row;
+  justify-items: space-between;
+  align-self: end;
+  gap: 10rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.shopping-cart__total__price {
+  font-size: 1.6rem;
+  color: #B88E2F;
+  font-weight: 600;
+}
+.shopping-cart__btns {
+  grid-row: 7/8;
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: row;
+  align-self: end;
+  gap: 1.4rem;
+  padding-top: 2.6rem;
+  border-top: solid 0.1rem #D9D9D9;
 }
 
 .header-wrapper {
@@ -1064,7 +1180,8 @@ td {
 
 .header-comp {
   height: 31.6rem;
-  background: url("https://s3-alpha-sig.figma.com/img/1461/f3d6/ff74c027a1888544144abe4be6e02cbf?Expires=1707696000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mV2AI-qEmmsz14TjG~Tr3HdIYO61pi5zW3UUqAPlufmqdkWJvIgwZmeKB7mxS3jvGnhM3Bx7GsZyVYuCqw04x8rCAzaamKrQMfKmHTq~KDmPCqDdWYKZAS6dx3XR92uZQQOtHxOvgk1RHRl-2qx8LgqhNwYE2LOXatqLy9tpAxYtueXc7F7lSoi7VlrNRRhUt4MpuEVIru3tcZOveDZr1QKPCD5CuEk-dixXSFoRmfIhQ7UNMk13AnNhjdj8jg7lfAptMrc8~oJ~27FoUIeXW40mQQDdELzwswtnG2dMTkkODthla2Upr8p9QD5-h2l6-b3giiqaJx7SpW3FUotjlg__") center/cover no-repeat;
+  margin-top: 11rem;
+  background: url("/src/img/header-bg-all.jpeg") center/cover no-repeat;
   color: #000;
 }
 .header-comp__wrapper {
