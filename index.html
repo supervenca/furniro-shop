@@ -26,7 +26,7 @@
             <a href="#"><img class="navbar__icons__icon" src="src/icons/account.svg"></a>
             <a href="#"><img class="navbar__icons__icon" src="src/icons/search.svg"></a>
             <a href="#"><img class="navbar__icons__icon" src="src/icons/heart.svg"></a>
-            <a href="#"><img class="navbar__icons__icon" src="src/icons/shopping-cart.svg"></a>
+            <a href="#"><img class="navbar__icons__icon cart" src="src/icons/shopping-cart.svg"></a>
           </div>
         </nav>
         <div class="header-wrapper">
@@ -313,8 +313,49 @@
           <p class="footer__rights">2023 furino. All rights reverved</p>
          </footer>
     </div>
-
-<script src="src/js/script.js"></script>
+    <section>
+      <div class="shopping-cart">
+        <div class="shopping-cart__header">
+          <span>Shopping Cart</span>
+        </div>
+        <div class="shopping-cart__icon">
+          <img src="src/icons/lock.svg">
+        </div>
+        <div class="shopping-cart__img">
+          <img src="src/img/shop/asgaard-sofa.png" alt="Asgaard sofa">
+        </div>
+        <div class="shopping-cart__product">
+          <p class="shopping-cart__product__name">Asgaard sofa</p>
+          <span class="shopping-cart__product__amount">1</span>
+          <span class="X">X</span>
+          <span class="shopping-cart__product__price">Rs. 250,000</span>
+        </div>
+        <div class="shopping-cart__icon"><img src="src/icons/delete.svg"></div>
+        <div class="shopping-cart__img">
+          <img src="src/img/shop/casaliving-wood.jpeg" alt="Casaliving Wood">
+        </div>
+        <div class="shopping-cart__product">
+          <p class="shopping-cart__product__name">Casaliving Wood</p>
+          <span class="shopping-cart__product__amount">1</span>
+          <span>X</span>
+          <span class="shopping-cart__product__price">Rs. 270,000</span>
+        </div>
+        <div class="shopping-cart__icon"><img src="src/icons/delete.svg"></div>
+        
+        <div class="shopping-cart__total">
+          <span>Subtotal</span>
+          <span class="shopping-cart__total__price">Rs. 520,000</span>
+        </div>
+        <div class="shopping-cart__btns">
+          <a href="cart-page.html"><button class="btn_shopping-cart">Cart</button></a>
+          <a href="checkout-page.html"><button class="btn_shopping-cart">Checkout</button></a>
+          <a href="comparison-page.html"><button class="btn_shopping-cart">Comparison</button></a>
+        </div>
+      </div>
+    </section>
+    
+    <script src="src/js/shopping-cart.js"></script>
+    <script src="src/js/script.js"></script>
 
 </body>
 </html>

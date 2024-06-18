@@ -1,0 +1,38 @@
+.cart-content
+    font-weight: 500
+    padding: 7.2rem 10rem 6.3rem 10rem
+    display: grid
+    grid-template-columns: 3fr 1fr
+    align-content: center
+    grid-gap: 5rem
+    &__list
+        & > table
+            border-collapse: collapse
+            & > thead
+                background-color: $color-pale-beige
+                height: 5.5rem
+                & > tr > th
+                    font-weight: 500
+                    line-height: 2.4rem
+            & > tbody > tr > td
+                padding-top: 5rem
+                & > input
+                    width: 3rem
+                    height: 3rem
+                    padding: .9rem
+                & > img
+                    cursor: pointer
+    &__totals
+       background-color: $color-pale-beige
+       width: 39.3rem
+       height: 39rem
+       padding: 1.5rem 7.5rem 8rem 7.5rem
+       display: grid
+       grid-template-rows: repeat(3, 1fr)
+       row-gap: 6rem
+       & > h2 
+        font-weight: 600
+        line-height: 4.8rem
+       & > button
+        width: 90%
+        justify-self: center
