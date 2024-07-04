@@ -1,58 +1,42 @@
 import axios, {isCancel, AxiosError} from 'axios';
 
-// class ProductCard {
-//     constructor(name, description, price, originalprice, discounted, discount, badge){
-//         this.name = name;
-//         //this.photo = photo;
-//         this.description = description;
-//         this.price = price;
-//         this.originalprice = originalprice;
-//         this.discounted = discounted;
-//         this.badge = badge;
-//         this.discount = discount;
-//     }
-
-//     render(){
-//         const testcard = document.querySelector('.test-div');
-//         testcard.innerHTML = `
-//             <div class="products__card">
-//                 <div class="products__card__label pink">-${this.discount}</div>
-//                 <img class="products__card__img" src="src/img/products/slytherine.png" alt="${this.name}">
-//                 <p class="products__card__title">${this.name}</p>
-//                 <p class="products__card__descr">${this.description}</p>
-//                 <p class="products__card__price">Rp ${this.price}</p>
-//                 <p class="products__card__ex-price">Rp ${this.originalprice}</p>
-//             </div>
-//         `
-//     }
-// }
-
-const transformData = (data) => {
-    return {
-        id: data.id,
-        name: data.attributes.name,
-        description: data.attributes.description,
-        price: data.attributes.price,
-        originalprice: data.attributes.original.price,
-        discounted: data.attributes.discounted,
-        badge: data.attributes.badge,
-        discount: data.attributes.discount
-    }
-  }
-
 function createCards(data) {
     const parentBox = document.querySelector('.products__cards');
 
     data.forEach(item => {
         let card = document.createElement('div');
+        let originalPrice;
+        let label;
+
+        item.attributes.originalprice === null ? originalPrice = '' : originalPrice = `<p class="products__card__ex-price">Rp ${item.attributes.originalprice}</p>`
+
+        if (item.attributes.label === null){
+          label = `<div class="products__card__label"></div>`;
+        }else if(item.attributes.label === 'New'){
+          label = `<div class="products__card__label mint">New</div>`;
+        }else {
+          label = `<div class="products__card__label pink">${item.attributes.label}</div>`;
+        }
+
         card.innerHTML = `
              <div class="products__card">
-                 <div class="products__card__label pink">-${item.attributes.discount}</div>
-                 <img class="products__card__img" src="src/img/products/slytherine.png" alt="${item.attributes.name}">
+                 ${label}
+                 <img class="products__card__img" src=${item.attributes.img_url} alt="${item.attributes.name}">
                  <p class="products__card__title">${item.attributes.name}</p>
                  <p class="products__card__descr">${item.attributes.description}</p>
                  <p class="products__card__price">Rp ${item.attributes.price}</p>
-                <p class="products__card__ex-price">Rp ${item.attributes.originalprice}</p>
+                 ${originalPrice}
+                 <div class="products__card__overlay">
+                    <button class="btn_white-yellow">Add to cart</button>
+                      <ul class="options-bar">
+                        <li class="options-bar__item"><a href="#">
+                          <img class="options-bar__icon" src="src/icons/share.svg">Share</a></li>
+                        <li class="options-bar__item"><a href="#">
+                          <img class="options-bar__icon" src="src/icons/compare.svg">Compare</a></li>
+                        <li class="options-bar__item"><a href="#">
+                          <img class="options-bar__icon" src="src/icons/like.svg">Like</a></li>
+                      </ul>
+                </div>
              </div>
             `
             parentBox.appendChild(card);
