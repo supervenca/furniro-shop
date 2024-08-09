@@ -20,23 +20,23 @@ function createCards(data) {
         let originalPrice;
         let label;
 
-        item.attributes.originalprice === null ? originalPrice = '' : originalPrice = `<p class="products__card__ex-price">Rp ${item.attributes.originalprice}</p>`
+        !item.originalPrice ? originalPrice = '' : originalPrice = `<p class="products__card__ex-price">Rp ${item.originalPrice}</p>`
 
-        if (item.attributes.label === null){
+        if (!item.label){
           label = `<div class="products__card__label"></div>`;
-        }else if(item.attributes.label === 'New'){
+        }else if(item.label === 'New'){
           label = `<div class="products__card__label mint">New</div>`;
         }else {
-          label = `<div class="products__card__label pink">${item.attributes.label}</div>`;
+          label = `<div class="products__card__label pink">${item.label}</div>`;
         }
 
         card.innerHTML = `
              <div class="products__card">
                  ${label}
-                 <img class="products__card__img" src=${item.attributes.img_url} alt="${item.attributes.name}">
-                 <p class="products__card__title">${item.attributes.name}</p>
-                 <p class="products__card__descr">${item.attributes.description}</p>
-                 <p class="products__card__price">Rp ${item.attributes.price}</p>
+                 <img class="products__card__img" src=${item.imageUrl} alt="${item.title}">
+                 <p class="products__card__title">${item.title}</p>
+                 <p class="products__card__descr">${item.description}</p>
+                 <p class="products__card__price">Rp ${item.currentPrice}</p>
                  ${originalPrice}
                  <div class="products__card__overlay">
                     <button class="btn_white-yellow">Add to cart</button>
@@ -55,11 +55,11 @@ function createCards(data) {
     });
 }
 
-axios__WEBPACK_IMPORTED_MODULE_0__["default"].get('https://dependable-friends-ef3ae9372e.strapiapp.com/api/furniro-products')
+axios__WEBPACK_IMPORTED_MODULE_0__["default"].get('https://acfp066m.api.sanity.io/v2022-03-07/data/query/production?query=*%5B_type+%3D%3D+%22product%22%5D%7B%0A++title%2C%0A++slug%2C%0A++%22imageUrl%22%3A+image.asset-%3Eurl%2C%0A++currentPrice%2C%0A++description%2C%0A++label%2C%0A++originalPrice%2C%0A++_id%0A%7D&perspective=published')
   .then(function (response) {
     // handle success
-    console.log(response.data.data[0].attributes.name);
-    createCards(response.data.data);
+    console.log(response.data.result[2]);
+    createCards(response.data.result);
   })
   .catch(function (error) {
     // handle error
